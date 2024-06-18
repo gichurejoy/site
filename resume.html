@@ -1,41 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Resume | Joy Gichure | Full Stack Engineer</title>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body class="resume">
-    <!-- //  INTRO  // -->
-    <header>
-      <!-- Start content edits below this line. -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume | Joy Gichure | Full Stack Engineer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="resume">
+  <!-- //  INTRO  // -->
+  <header>
+    <!-- Start content edits below this line. -->
+    <div class="content-wrapper">
       <h1>Joy Gichure</h1>
       <h2>Full Stack Engineer</h2>
+    </div>
+    <!-- End content edits here. -->
+  </header>
+
+  <main class="content-wrapper">
+    <!-- //  PROFILE  // -->
+    <section class="resume-section">
+      <!-- Start content edits below this line. -->
+      <h2>Profile</h2>
+      <p>Currently a full stack developer. I have a diverse range of experiences working as a digital marketer and data
+        analyst.</p>
+      <a href="index.html">Back to homepage</a>
 
       <!-- End content edits here. -->
-    </header>
+    </section>
 
-    <main>
-      <!-- //  PROFILE  // -->
-      <section>
-        <!-- Start content edits below this line. -->
-        <h2>Profile</h2>
-        <p>Currently a full stack developer. I have a diverse range of experiences working as a digital marketer and data analyst.</p>
-        <a href="index.html">Back to homepage</a>
+    <!-- //  PROJECTS  // -->
+    <section class="resume-section">
+      <!-- Start content edits below this line. -->
+      <h2>Projects</h2>
+      <p>View selected projects below</p>
 
-        <!-- End content edits here. -->
+      <!-- To add more items, copy this whole <section></section> block-->
+      <section class="project-item">
+        <img src="images/project-the-wire-ipsum-500px.png" srcset="images/project-the-wire-ipsum-500px.png"
+          alt="description of image" width="" height="">
+        <h3>Stock Analysis</h3>
+        <p>Summary or description of the project and/or your role in it. Add as many paragraphs as you need.</p>
+        <!-- link to project -->
+        <a class="btn" href="#" target="_blank">Link</a>
+        <!-- additional links, e.g. newsletter -->
+        <a class="btn" href="#" target="_blank">Another link</a>
       </section>
 
-      <!-- //  PROJECTS  // -->
-      <section>
-        <!-- Start content edits below this line. -->
-        <h2>Projects</h2>
-        <p>View selected projects below</p>
-
-        <!-- To add more items, copy this whole <section></section> block-->
-        <section>
-          <img src="images/project-the-wire-ipsum-500px.png" srcset="images/project-the-wire-ipsum-500px.png" alt="description of image" width="" height="">
+        <section class="project-item">
+          <img src="images/project-the-wire-ipsum-500px.png" srcset="images/project-the-wire-ipsum-500px.png"
+            alt="description of image" width="" height="">
           <h3>Stock Analysis</h3>
           <p>Summary or description of the project and/or your role in it. Add as many paragraphs as you need.</p>
           <!-- link to project -->
@@ -43,23 +59,23 @@
           <!-- additional links, e.g. newsletter -->
           <a class="btn" href="#" target="_blank">Another link</a>
         </section>
-        
-        <!-- End content edits here. -->
-      </section>
 
-      <!-- //  WORK EXPERIENCE  // -->
+      <!-- End content edits here. -->
+    </section>
+
+    <!-- //  WORK EXPERIENCE  // -->
+    <section class="resume-section">
+      <!-- Start content edits below this line.  -->
+      <h2>Work Experience</h2>
+      <p>My work expereience can be found on linked in.</p>
+
+      <!-- To add more items, copy this whole <section></section> block -->
       <section>
-        <!-- Start content edits below this line.  -->
-        <h2>Work Experience</h2>
-        <p>My work expereience can be found on linked in.</p>
+        <h3>Full Stack Engineer</h3>
+        <p>Medserv Africa</p>
+        <p>June 2024 - Present</p>
+        <p>Development, deployment.</p>
 
-        <!-- To add more items, copy this whole <section></section> block -->
-        <section>
-          <h3>Full Stack Engineer</h3>
-          <p>Medserv Africa</p>
-          <p>June 2024 - Present</p>
-          <p>Development, deployment.</p>
-      
 
         <section>
           <h3>Digital Marketer</h3>
@@ -79,7 +95,7 @@
       </section>
 
       <!-- //  EDUCATION & CERTIFICATIONS  // -->
-      <section>
+      <section class="resume-section">
         <!-- Start content edits below this line.  -->
         <h2>Education</h2>
 
@@ -92,25 +108,28 @@
 
         <!-- End content edits here. -->
       </section>
-    </main>
+  </main>
 
-    <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
-    <footer>
-      <!-- Start content edits below this line. -->
-      <p>© 2023 by Joy Gichure | <a href="gichureshiru@gmail.com">gichureshiru@gmail.com</a></p>
+  <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
+  <footer>
+    <!-- Start content edits below this line. -->
+    <p>© 2023 by Joy Gichure | <a href="gichureshiru@gmail.com">gichureshiru@gmail.com</a></p>
 
-      <!-- Add or remove any networks. -->
-      <ul>
-        
-        <li>
-          <a href="https://www.linkedin.com/in/joy-wanjiru-4426221a1/" target="_blank"><img src="images/icon-logo-linkedin.png" alt="my LinkedIn"></a>
-        </li>
-        <li>
-          <a href="https://github.com/gichurejoy" target="_blank"><img src="images/211904_social_github_icon.png" alt="my github" ></a>
-        </li>
-       
-      
+    <!-- Add or remove any networks. -->
+    <ul class="socials">
+
+      <li>
+        <a href="https://www.linkedin.com/in/joy-wanjiru-4426221a1/" target="_blank"><img
+            src="images/icon-logo-linkedin.png" alt="my LinkedIn"></a>
+      </li>
+      <li>
+        <a href="https://github.com/gichurejoy" target="_blank"><img src="images/211904_social_github_icon.png"
+            alt="my github"></a>
+      </li>
+
+
       <!-- End content edits here. -->
-    </footer>
-  </body>
+  </footer>
+</body>
+
 </html>

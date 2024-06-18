@@ -9,9 +9,19 @@ Off-white     #f6f6f6
 */
 
 /*global*/
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+html, body {
+    height: 100%;
+}
 
 body {
 background-color: #f6f6f6 ;
+margin: 0;
 }
 
 /*links*/
@@ -33,6 +43,11 @@ footer a.hover {
     color: #f6f6f6;
     text-decoration: none;
 }
+.content-wrapper {
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 30px;
+}
 
 /*HOME
 ---------------------------*/
@@ -46,13 +61,34 @@ background-position: cover;
 
 /*RESUME
 ---------------------------*/
-
+.resume header::before {
+    background: url(../images/bg-home-office-bookshelf.jpg) bottom;
+    background-size: cover;
+    content: "";
+    display: block;
+    height: 375px;
+}
+.resume-section {
+    margin-bottom: 50px;
+}
+.resume-section h2 {
+    border-bottom: 2px dashed #d3d4d6;
+}
 
 /*profile
 ---------------------------*/
 
 /*projects
 ---------------------------*/
+.project-item {
+    display: flow-root;
+    margin: 30px 0;
+}
+.project-item img {
+    width: 300px;
+    float: left;
+    margin-right: 20px;
+}
 
 /*work experience
 ---------------------------*/
@@ -66,4 +102,14 @@ background-position: cover;
 footer {
     background: #222;
     color: #d3d4d6;
+}
+.socials {
+    list-style-type: none;
+    padding: 0;
+}
+.socials li{
+    display: inline-block;
+}
+.socials img {
+    width: 32px;
 }
