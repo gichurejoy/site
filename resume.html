@@ -5,11 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Resume | Joy Gichure | Full Stack Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="resume">
-  <!-- //  INTRO  // -->
+  <a class="btn download-link" href="joygichurecv (1).pdf">Download PDF</a>
   <header>
     <!-- Start content edits below this line. -->
     <div class="content-wrapper">
@@ -37,7 +42,7 @@
       <h2>Projects</h2>
       <p>View selected projects below</p>
 
-      <!-- To add more items, copy this whole <section></section> block-->
+     <div class="project-wrapper">
       <section class="project-item">
         <img src="images/project-the-wire-ipsum-500px.png" srcset="images/project-the-wire-ipsum-500px.png"
           alt="description of image" width="" height="">
@@ -49,17 +54,17 @@
         <a class="btn" href="#" target="_blank">Another link</a>
       </section>
 
-        <section class="project-item">
-          <img src="images/project-the-wire-ipsum-500px.png" srcset="images/project-the-wire-ipsum-500px.png"
-            alt="description of image" width="" height="">
-          <h3>Stock Analysis</h3>
-          <p>Summary or description of the project and/or your role in it. Add as many paragraphs as you need.</p>
-          <!-- link to project -->
-          <a class="btn" href="#" target="_blank">Link</a>
-          <!-- additional links, e.g. newsletter -->
-          <a class="btn" href="#" target="_blank">Another link</a>
-        </section>
-
+      <section class="project-item">
+        <img src="images/project-the-wire-ipsum-500px.png" srcset="images/project-the-wire-ipsum-500px.png"
+          alt="description of image" width="" height="">
+        <h3>Stock Analysis</h3>
+        <p>Summary or description of the project and/or your role in it. Add as many paragraphs as you need.</p>
+        <!-- link to project -->
+        <a class="btn" href="#" target="_blank">Link</a>
+        <!-- additional links, e.g. newsletter -->
+        <a class="btn" href="#" target="_blank">Another link</a>
+      </section>
+    </div> 
       <!-- End content edits here. -->
     </section>
 
@@ -70,17 +75,31 @@
       <p>My work expereience can be found on linked in.</p>
 
       <!-- To add more items, copy this whole <section></section> block -->
-      <section>
-        <h3>Full Stack Engineer</h3>
-        <p>Medserv Africa</p>
-        <p>June 2024 - Present</p>
-        <p>Development, deployment.</p>
+      <section class="work-item">
+        <div class="work-details">
+          <h3>Full Stack Engineer</h3>
+          <p>Medserv Africa</p>
+          <p>June 2024 - Present</p>
+          <p>Development, deployment.</p>
+        </div>
 
+        <div class="work-summary">
+          <p>Primary responsibilities include: Development and Maintenance, Database Management, Testing and
+            Debugging, Deployment and Maintenance, Collaboration, Security
+            Additional Responsibilities: Digital Marketing & Creative, Integrating New Products into the platform, IT
+            Infrastructure Support, Networking, ERP implementation, Client and Supplier Onboarding & technical Support
+          </p>
+        </div>
+      </section>
 
-        <section>
+      <section class="work-item">
+        <div class="work-details">
           <h3>Digital Marketer</h3>
           <p>Hyssop Properties</p>
           <p>October 2023 - May 2024</p>
+        </div>
+
+        <div class="work-summary">
           <p>Website management and graphic design.</p>
           <p>Key contributions:</p>
           <ul>
@@ -89,25 +108,31 @@
             <li>Creating logos for the company's subsidiaries</li>
             <li>Design banners</li>
           </ul>
-        </section>
-
-        <!-- End content edits here. -->
+        </div>
       </section>
 
-      <!-- //  EDUCATION & CERTIFICATIONS  // -->
-      <section class="resume-section">
-        <!-- Start content edits below this line.  -->
-        <h2>Education</h2>
+      <!-- End content edits here. -->
+    </section>
 
-        <!-- To add more items, copy this whole <section></section> block -->
-        <section>
-          <h3>Strathmore University - Nairobi</h3>
-          <p>Bachelor of science, 2019 - 2022</p>
-          <p>Informatics and Computer Science</p>
-        </section>
+    <!-- //  EDUCATION & CERTIFICATIONS  // -->
+    <section class="resume-section">
+      <!-- Start content edits below this line.  -->
+      <h2>Education</h2>
 
-        <!-- End content edits here. -->
+      <!-- To add more items, copy this whole <section></section> block -->
+      <section class="education-item">
+        <h3>Strathmore University - Nairobi</h3>
+        <p>Bachelor of science, 2019 - 2022</p>
+        <p>Informatics and Computer Science</p>
       </section>
+
+      <section class="education-item">
+        <h3>ESMT Berlin</h3>
+        <p>Certificate, July 2023 - October 2023</p>
+        <p>Business Management</p>
+      </section>
+      <!-- End content edits here. -->
+    </section>
   </main>
 
   <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
