@@ -4,7 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Joy Gichure - Full Stack Engineer specializing in building elegant solutions for complex problems. Expert in HTML5, CSS3, JavaScript, React, Python, and Node.js.">
+  <meta name="keywords" content="Full Stack Engineer, Web Development, JavaScript, React, Python, Node.js, HTML5, CSS3">
+  <meta name="author" content="Joy Gichure">
+
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Joy Gichure | Full Stack Engineer">
+  <meta property="og:description" content="Building solutions for complex problems">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-domain.com">
+
   <title>Joy Gichure | Full Stack Engineer</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -12,6 +24,45 @@
     rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      // Initialize EmailJS with your public key
+      emailjs.init("D8Mruj-Z_kGndXHfI");
+    })();
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #3c8453;
+      color: #f6f6f6;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 1000;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+    }
+
+    .back-to-top:hover {
+      background: #bcaa96;
+      color: #222222;
+    }
+  </style>
 </head>
 
 <body class="home">
@@ -23,7 +74,7 @@
         <h1>Joy Gichure</h1>
         <h2>Full Stack Engineer</h2>
         <div class="tagline">
-          <p>Building elegant solutions for complex problems</p>
+          <p>Building solutions for complex problems</p>
         </div>
         <!-- End content edits here. -->
       </header>
@@ -32,20 +83,156 @@
       <main>
         <!-- Start content edits below this line. -->
         <section class="about-section">
-          <p class="intro">Passionate Full Stack Engineer with a journey that began right after high school. I've been on an upward trajectory ever since, constantly learning and growing in the tech space.</p>
+          <p class="intro">Passionate Full Stack Engineer with a journey that began right after high school. I've been
+            on an upward trajectory ever since, constantly learning and growing in the tech space.</p>
           <div class="skills">
             <h3>Tech Stack</h3>
             <div class="skill-icons">
-              <i class="fab fa-html5" title="HTML5"></i>
-              <i class="fab fa-css3-alt" title="CSS3"></i>
-              <i class="fab fa-js" title="JavaScript"></i>
               <i class="fab fa-react" title="React"></i>
+              <i class="fab fa-js" title="TypeScript"></i>
               <i class="fab fa-python" title="Python"></i>
+              <i class="fab fa-php" title="Laravel/PHP"></i>
+              <i class="fab fa-python" title="Django"></i>
+              <i class="fas fa-palette" title="Tailwind CSS"></i>
               <i class="fab fa-node" title="Node.js"></i>
             </div>
           </div>
-          <p>To learn more about my work history and projects, check out my <a href="resume.html" class="btn">resume</a>.</p>
         </section>
+
+        <section class="contact-section">
+          <h2>Get In Touch</h2>
+          <p>Interested in working together? Let's connect!</p>
+          <div class="contact-buttons">
+            <button class="btn" id="contactBtn">Email Me</button>
+          </div>
+          <p class="resume-note">To learn more about my work history and projects,
+          <a href="resume.html" class="btn btn-secondary">Click here</a>.</p>
+        </section>
+
+        <!-- Contact Form Popup -->
+        <div id="contactPopup" class="popup">
+          <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <div id="formStatus" class="form-status" aria-live="polite"></div>
+              <button type="submit" class="btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+
+        <script>
+          // Popup functionality
+          const contactBtn = document.getElementById('contactBtn');
+          const contactPopup = document.getElementById('contactPopup');
+          const closeBtn = document.querySelector('.close-btn');
+          const contactForm = document.getElementById('contactForm');
+
+          function openPopup() {
+            contactPopup.style.display = "flex";
+            const status = document.getElementById('formStatus');
+            status.textContent = '';
+            status.className = 'form-status';
+            document.getElementById('name').focus();
+          }
+
+          function closePopup() {
+            contactPopup.style.display = "none";
+          }
+
+          contactBtn.onclick = openPopup;
+
+          closeBtn.onclick = closePopup;
+
+          window.onclick = function (event) {
+            if (event.target == contactPopup) {
+              closePopup();
+            }
+          }
+
+          // Close with Esc key
+          window.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && contactPopup.style.display === 'flex') {
+              closePopup();
+            }
+          });
+
+          // Form submission handling
+          contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            submitBtn.setAttribute('aria-busy', 'true');
+            const inputs = this.querySelectorAll('input, textarea');
+            inputs.forEach(i => i.disabled = true);
+
+            const status = document.getElementById('formStatus');
+            status.textContent = 'Sending your message...';
+            status.className = 'form-status pending';
+
+            // Prepare email parameters
+            const templateParams = {
+              from_name: this.name.value,
+              from_email: this.email.value,
+              subject: this.subject.value,
+              message: this.message.value,
+              email: 'joy.gichure@outlook.com',
+              reply_to: this.email.value,
+              date: new Date().toLocaleString(),
+              website: 'Portfolio Contact Form'
+            };
+
+            console.log('Sending email with params:', templateParams);
+
+            // Send email using EmailJS
+            emailjs.send('service_v4ejoml', 'template_9wl14kw', templateParams)
+              .then(function (response) {
+                console.log('SUCCESS!', response.status, response.text);
+                status.textContent = 'Message sent successfully! I will get back to you soon.';
+                status.className = 'form-status success';
+                contactForm.reset();
+                setTimeout(() => {
+                  closePopup();
+                }, 1200);
+              }, function (error) {
+                console.log('FAILED...', error);
+                console.log('Error details:', {
+                  status: error.status,
+                  text: error.text,
+                  message: error.message
+                });
+                status.textContent = 'Sorry, there was a problem sending your message. Please try again later.';
+                status.className = 'form-status error';
+              })
+              .finally(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                submitBtn.removeAttribute('aria-busy');
+                const inputs = contactForm.querySelectorAll('input, textarea');
+                inputs.forEach(i => i.disabled = false);
+              });
+          });
+        </script>
         <!-- End content edits here. -->
       </main>
     </div>
@@ -53,7 +240,7 @@
   <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
   <footer>
     <!-- Start content edits below this line. -->
-    <p> 2024 Joy Gichure | <a href="mailto:gichureshiru@gmail.com">gichureshiru@gmail.com</a></p>
+    <p> © 2023-2025 by Joy Gichure | <a href="mailto:joy.gichure@outlook.com">joy.gichure@outlook.com</a></p>
 
     <!-- Add or remove any networks. -->
     <ul class="socials">
@@ -70,6 +257,23 @@
     </ul>
     <!-- End content edits here. -->
   </footer>
+
+  <a href="#" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <script>
+    // Back to top button functionality
+    const backToTopButton = document.querySelector('.back-to-top');
+
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+  </script>
 </body>
 
 </html>
